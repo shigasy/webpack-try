@@ -1,5 +1,6 @@
 import { returnHello } from "./myutil";
 import "./style.css";
+import "./font.css"
 
 const say = (value) => console.log(value);
 
