@@ -8,5 +8,16 @@ module.exports = {
   devServer: {
     contentBase: './dist'
   },
-  devtool: 'eval-source-map'
+  devtool: 'eval-source-map',
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
+      }
+    ]
+  }
 }
