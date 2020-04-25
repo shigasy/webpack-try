@@ -18,6 +18,20 @@ module.exports = {
         use: ExtractTextPlugin.extract({
           use: 'css-loader'
         })
+      },
+      {
+        test: /\.(gif|png|jpn)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 51200,
+              name: './images/[name].[ext]'
+            }
+
+          }
+        ]
+        
       }
     ]
   },

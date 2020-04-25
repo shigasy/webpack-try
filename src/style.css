@@ -5,3 +5,7 @@
 .hoge {
     color: #a3daff;
 }
+
+body {
+    background-image: url(./images/test.png);
+}
