@@ -1,16 +1,13 @@
+const path = require('path')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
-  mode: 'development',
   entry: './src/index.js',
   output: {
-    path: `${__dirname}/dist`,
+    // 出力するpathはOSによって異なるから、安全にするため
+    path: path.resolve(__dirname, 'dist'),
     filename: 'main.js'
   },
-  devServer: {
-    contentBase: './dist'
-  },
-  devtool: 'eval-source-map',
   module: {
     rules: [
       {
