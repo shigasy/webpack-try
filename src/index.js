@@ -16,3 +16,4 @@ window.onload = () => {
 };
 if (process.env.NODE_ENV === "development") console.log("developだよ");
 process.env.NODE_ENV === "production" ? say("production") : say("development")
+console.error('error')
